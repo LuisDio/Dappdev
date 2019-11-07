@@ -10,14 +10,18 @@ class Main extends Component {
 
             <form onSubmit={(event) => {
                 event.preventDefault()
+                // Fetching name from the form below
                 const name = this.productName.value
+                // Fetching price from the form below
                 const price = window.web3.utils.toWei(this.productPrice.value.toString(), 'Ether')
                 this.props.createProduct(name, price)
                 }}>
+
                 <div className="form-group mr-sm-2">
                     <input
                     id="productName"
                     type="text"
+                    
                     ref={(input) => { this.productName = input }}
                     className="form-control"
                     placeholder="Product Name"
