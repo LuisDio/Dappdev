@@ -58,6 +58,7 @@ class Main extends Component {
                         <td>{product.name}</td>
                         <td>{ window.web3.utils.fromWei(product.price.toString(), 'Ether')} Eth</td>
                         <td>{product.owner}</td>
+                        
                         <td><button className="buyButton">Buy</button></td>
                     </tr>
                   )
